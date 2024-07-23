@@ -1,13 +1,10 @@
-import React, { Component } from "react";
-
-export class NewsItems extends Component {
-  render() {
-    let { title, description, imageUrl, newsUrl, author, date, source } =
-      this.props;
+import React from 'react';
+const NewsItems =(props)=> {
+    let { title, description, imageUrl, newsUrl, author, date, source } = props;
     return (
       <div className="my-3">
         <div className="card">
-          <div className="d-flex justify-content-end position-absolute right-0">
+          <div className="d-flex justify-content-end position-absolute ">
             <span className="badge rounded-pill bg-danger">{source}</span>
           </div>
           <img
@@ -40,7 +37,6 @@ export class NewsItems extends Component {
         </div>
       </div>
     );
-  }
 }
 
 export default NewsItems;
